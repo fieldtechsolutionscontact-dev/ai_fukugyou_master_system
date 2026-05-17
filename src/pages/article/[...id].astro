@@ -1,0 +1,29 @@
+---
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles');
+  return articles.map(article => ({
+    params: { id: article.id },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+---
+<html>
+<head>
+  <title>{article.data.title}</title>
+  <meta charset="utf-8" />
+  {article.data.canonical_url && <link rel="canonical" href={article.data.canonical_url} />}
+</head>
+<body style="font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 2rem; line-height: 1.6;">
+  <a href="/ai_fukugyou_master_system/">← トップへ戻る</a>
+  <h1 style="border-bottom: 2px solid #333; padding-bottom: 0.5rem;">{article.data.title}</h1>
+  <div style="color: gray; margin-bottom: 2rem;">
+    Zennトピック: {article.data.topics?.join(', ')}
+  </div>
+  <Content />
+</body>
+</html>

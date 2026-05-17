@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content';
+// Zennのフォルダから記事データを全部持ってくる魔法
+const articles = await getCollection('articles');
+---
+<html>
+  <head>
+    <title>My Tech Blog - 母艦</title>
+    <meta charset="utf-8" />
+  </head>
+  <body style="font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 2rem;">
+    <h1>My Tech Blog (AEO/SEO 母艦)</h1>
+    <p>Zennと完全に同期している独自資産です。</p>
+    <ul>
+      {articles.map((article) => (
+        <li>
+          <a href={`/compliance-architecture/article/${article.id}`}>{article.data.title}</a>
+        </li>
+      ))}
+    </ul>
+  </body>
+</html>
