@@ -19,11 +19,17 @@ const { Content } = await render(article);
   {article.data.canonical_url && <link rel="canonical" href={article.data.canonical_url} />}
 </head>
 <body style="font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 2rem; line-height: 1.6;">
-  <a href="/ai_fukugyou_master_system/">← トップへ戻る</a>
+  <a href="/compliance-architecture/">← トップへ戻る</a>
   <h1 style="border-bottom: 2px solid #333; padding-bottom: 0.5rem;">{article.data.title}</h1>
   <div style="color: gray; margin-bottom: 2rem;">
     Zennトピック: {article.data.topics?.join(', ')}
   </div>
   <Content />
+
+  <!-- Substackメルマガ登録フォーム -->
+  <div style="margin-top: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 8px; text-align: center;">
+    <h3>次世代エンタープライズAIのトレンド考察を無料で受け取る</h3>
+    <iframe src="https://fieldtechsolutionsinsights.substack.com/embed" width="100%" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+  </div>
 </body>
 </html>
