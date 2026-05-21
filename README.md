@@ -37,7 +37,7 @@ Unlike black-box SaaS platforms, this package empowers your engineering/complian
 ## 🛠️ Technical Support & Customization
 This is an enterprise-grade digital asset. If you require integration with your internal SAP/Oracle systems or need to customize the Dify workflow for specific non-EU manufacturing data formats, please contact our implementation team.
 
-**Email:** [YOUR_SUPPORT_EMAIL_HERE]
+**Email:** [fieldtech.solutions.contact@gmail.com]
 **FieldTech Solutions:** [https://fieldtech.gumroad.com/l/cbam-precision-calculator](https://fieldtech.gumroad.com/l/cbam-precision-calculator)
 
 ---
